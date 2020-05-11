@@ -1,0 +1,48 @@
+/* closed caption rendering area (vtt.js)  */
+.rmp-cc-area {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  .transition(top; 0.4s);
+}
+
+/* (vtt.js) when control bar is visible move up the CAPTIONS area so that captions are not hidden */
+.rmp-chrome .rmp-cc-area {
+  bottom: 40px;
+}
+
+.rmp-no-chrome .rmp-cc-area,
+.rmp-module-overlay-open .rmp-cc-area {
+  bottom: 0;
+}
+
+/* .rmp-cc-container is child of .rmp-cc-area
+.rmp-cc-container {
+}
+*/
+
+/* .rmp-cc-display is child of .rmp-cc-container - apply CSS if required
+.rmp-cc-display {
+}
+*/
+
+// .rmp-cc-cue is child of .rmp-cc-display
+.rmp-cc-cue {
+  padding: 4px 8px;
+  line-height: 1.45;
+  .border-radius(4px);
+}
+
+/* iOS where native track tags are used */
+.rmp-video::cue {
+  color: @ccFontColor;
+  padding: 4px 8px;
+  line-height: 1.35;
+  .border-radius(4px);
+  .font-rmp();
+}
