@@ -8,8 +8,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "compile": "lessc -clean-css ./css/rmp-mzaalo.less ./css/rmp-mzaalo.min.css",
-    "watch" : "less-watch-compiler --config less-watch-compiler.config.json"
+    "compile": "lessc -clean-css mzaaloPlayer/css/rmp-mzaalo.less mzaaloPlayer/css/rmp-mzaalo.min.css",
+    "watch" : "less-watch-compiler --config less-watch-compiler.config.json",
+    "push" : "scp -r mzaaloPlayer Xfinite@104.211.223.183:/var/www/html/build",
+    "deploy" : "yarn compile && yarn push"
   },
   "dependencies": {
     "less": "^3.11.1",
