@@ -7,12 +7,13 @@
   "author": "Aamir khan <aamirkhan180@gmail.com>",
   "license": "MIT",
   "private": true,
-
   "scripts": {
-  	"compile" : "lessc ./css/rmp-mzaalo.less ./css/rmp-mzaalo.css"
+    "compile": "lessc -clean-css ./css/rmp-mzaalo.less ./css/rmp-mzaalo.min.css",
+    "watch" : "less-watch-compiler css css rmp-mzaalo.less"
   },
-
   "dependencies": {
-    "less": "^3.11.1"
+    "less": "^3.11.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-watch-compiler": "^1.14.6"
   }
 }
