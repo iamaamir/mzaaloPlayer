@@ -7,6 +7,11 @@
   "author": "Aamir khan <aamirkhan180@gmail.com>",
   "license": "MIT",
   "private": true,
+
+  "scripts": {
+  	"compile" : "lessc ./css/rmp-mzaalo.less ./css/rmp-mzaalo.css"
+  },
+
   "dependencies": {
     "less": "^3.11.1"
   }
