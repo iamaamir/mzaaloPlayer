@@ -1,22 +1,10 @@
 {
-  "name": "mzaaloplayer",
+  "name": "mzaaloPlayer",
   "version": "1.0.0",
   "description": "a custom version of the radiant player design for mzaalo.com",
   "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iamaamir/mzaaloPlayer.git"
-  },
-  "author": "Aamir khan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iamaamir/mzaaloPlayer/issues"
-  },
-  "homepage": "https://github.com/iamaamir/mzaaloPlayer#readme"
+  "repository": "git@github.com:iamaamir/mzaaloPlayer.git",
+  "author": "Aamir khan <aamirkhan180@gmail.com>",
+  "license": "MIT",
+  "private": true
 }
