@@ -6,5 +6,8 @@
   "repository": "git@github.com:iamaamir/mzaaloPlayer.git",
   "author": "Aamir khan <aamirkhan180@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "less": "^3.11.1"
+  }
 }
