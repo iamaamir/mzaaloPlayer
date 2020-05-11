@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "compile": "lessc -clean-css ./css/rmp-mzaalo.less ./css/rmp-mzaalo.min.css",
-    "watch" : "less-watch-compiler css css rmp-mzaalo.less"
+    "watch" : "less-watch-compiler --config less-watch-compiler.config.json"
   },
   "dependencies": {
     "less": "^3.11.1",

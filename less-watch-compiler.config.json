@@ -1,0 +1,8 @@
+{
+    "watchFolder": "css",   
+    "outputFolder": "css",
+    "mainFile": "rmp-mzaalo.less",   
+    "sourceMap": false,
+    "less-args": "-clean-css",
+    "plugins" : "less-plugin-clean-css"
+}
