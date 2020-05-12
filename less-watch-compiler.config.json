@@ -1,6 +1,6 @@
 {
-    "watchFolder": "src/css",   
-    "outputFolder": "src/css",
+    "watchFolder": "mzaaloPlayer/css",   
+    "outputFolder": "mzaaloPlayer/css",
     "mainFile": "rmp-mzaalo.less",   
     "sourceMap": false,
     "less-args": "-clean-css",
