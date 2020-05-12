@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "compile": "lessc -clean-css mzaaloPlayer/css/rmp-mzaalo.less mzaaloPlayer/css/rmp-mzaalo.min.css",
+    "compile": "lessc -clean-css mzaaloPlayer/css/rmp-s1.less mzaaloPlayer/css/rmp-s1.min.css",
     "watch" : "less-watch-compiler --config less-watch-compiler.config.json",
     "push" : "scp -r mzaaloPlayer Xfinite@104.211.223.183:/var/www/html/build",
     "deploy" : "yarn compile && yarn push"
