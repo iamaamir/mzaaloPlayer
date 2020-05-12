@@ -1,11 +1,33 @@
 @charset "utf-8";
 /*!
  * Copyright (c) 2015-2020 Radiant Media Player
- * Radiant Media Player 5.7.10 | https://www.radiantmediaplayer.com
+ * Radiant Media Player 5.8.0 | https://www.radiantmediaplayer.com
  * Terms of service: https://www.radiantmediaplayer.com/terms-of-service.html
  * Contact information: https://www.radiantmediaplayer.com/contact.html
  */
 /* helpers */
+/*
+  roboto-regular - latin
+  this is the main font for the player
+  first we try to see if the font is not already present on device - if not we load it
+  woff2 - Super Modern Browsers
+  woff - Modern Browsers
+  truetype - Safari, Android, iOS
+  svg - Legacy iOS
+  */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('fonts/roboto-v20-latin-regular.woff2') format('woff2'), url('fonts/roboto-v20-latin-regular.woff') format('woff'), url('fonts/roboto-v20-latin-regular.ttf') format('truetype'), url('fonts/roboto-v20-latin-regular.svg#Roboto') format('svg');
+}
+/* player icons file */
+@font-face {
+  font-family: 'rmp-font';
+  src: url('fonts/rmp-font.woff2?s73jsd') format('woff2'), url('fonts/rmp-font.woff?s73jsd') format('woff'), url('fonts/rmp-font.ttf?s73jsd') format('truetype'), url('fonts/rmp-font.svg?s73jsd#rmp-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* accessible buttons
  * reset user agent stylesheet styles */
 .rmp-button {
@@ -615,20 +637,6 @@
 .rmp-360-ui .rmp-description {
   display: none;
 }
-/*
-  roboto-regular - latin
-  first we try to see if the font is not already present on device - if not we load it
-  woff2 - Super Modern Browsers
-  woff - Modern Browsers
-  truetype - Safari, Android, iOS
-  svg - Legacy iOS
-  */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url('fonts/roboto-v18-latin-regular.woff2') format('woff2'), url('fonts/roboto-v18-latin-regular.woff') format('woff'), url('fonts/roboto-v18-latin-regular.ttf') format('truetype'), url('fonts/roboto-v18-latin-regular.svg#Roboto') format('svg');
-}
 /* player container */
 .rmp-container {
   position: relative;
@@ -667,21 +675,6 @@
   -moz-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* Accessibility
- * outline is added on focus with JavaScript through the rmp-focus class for keyboard navigation
- * this is for the player container and related items where inset shadows are not rendered */
-.rmp-alt-focus,
-.rmp-related-ui .rmp-alt-focus {
-  -webkit-box-shadow: 0 0 0 2px #2196f3;
-  -moz-box-shadow: 0 0 0 2px #2196f3;
-  box-shadow: 0 0 0 2px #2196f3;
-}
-/* this is for inner player UI elements (play, seekbar, fullscreen buttons) */
-.rmp-focus {
-  -webkit-box-shadow: inset 0 0 0 2px #2196f3;
-  -moz-box-shadow: inset 0 0 0 2px #2196f3;
-  box-shadow: inset 0 0 0 2px #2196f3;
-}
 /* applies to the video tag and its wrapper */
 .rmp-video,
 .rmp-content {
@@ -697,7 +690,44 @@
   display: block;
   outline: none;
 }
-/* overlay button / spinner */
+/* right to left language (Hebrew) */
+.rmp-rtl {
+  direction: rtl;
+}
+/* debug overlay */
+.rmp-debug-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-size: 12px;
+  overflow: auto;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: left;
+}
+.rmp-debug-overlay-text {
+  margin-bottom: 5px;
+}
+/* Accessibility
+ * outline is added on focus with JavaScript through the rmp-focus class for keyboard navigation
+ * this is for the player container and related items where inset shadows are not rendered */
+.rmp-alt-focus,
+.rmp-related-ui .rmp-alt-focus {
+  -webkit-box-shadow: 0 0 0 2px #2196f3;
+  -moz-box-shadow: 0 0 0 2px #2196f3;
+  box-shadow: 0 0 0 2px #2196f3;
+}
+/* this is for inner player UI elements (play, seekbar, fullscreen buttons) */
+.rmp-focus {
+  -webkit-box-shadow: inset 0 0 0 2px #2196f3;
+  -moz-box-shadow: inset 0 0 0 2px #2196f3;
+  box-shadow: inset 0 0 0 2px #2196f3;
+}
+/* central play/pause button container for desktop */
 .rmp-overlay-button {
   position: absolute;
   top: 50%;
@@ -719,6 +749,14 @@
   -moz-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
+.rmp-overlay-button .rmp-i-play,
+.rmp-overlay-button .rmp-i-replay {
+  line-height: 60px;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+/* central play/pause button container for mobile */
 .rmp-mobile-central-ui {
   position: absolute;
   top: 50%;
@@ -740,8 +778,6 @@
   -moz-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-.rmp-overlay-button .rmp-i-play,
-.rmp-overlay-button .rmp-i-replay,
 .rmp-mobile-central-ui .rmp-i-play,
 .rmp-mobile-central-ui .rmp-i-pause,
 .rmp-mobile-central-ui .rmp-i-replay {
@@ -750,6 +786,7 @@
   height: 100%;
   display: inline-block;
 }
+/* central loading spin container */
 .rmp-loading-spin {
   position: absolute;
   top: 50%;
@@ -771,6 +808,7 @@
   -moz-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
+/* when rmp-waiting is on player container then we force visibility of loading spin */
 .rmp-waiting .rmp-loading-spin {
   opacity: 1 !important;
   visibility: visible !important;
@@ -781,7 +819,7 @@
   visibility: hidden !important;
 }
 /* hide controls layout */
-.rmp-hide-controls > *:not(.rmp-video):not(.rmp-content):not(.rmp-ad-container):not(.rmp-error):not(object):not(embed):not(.rmp-poster):not(.rmp-ad-block-container),
+.rmp-hide-controls > *:not(.rmp-video):not(.rmp-content):not(.rmp-ad-container):not(.rmp-error):not(.rmp-poster):not(.rmp-ad-block-container),
 .rmp-no-display,
 .rmp-no-central-play .rmp-overlay-button,
 .rmp-no-central-play .rmp-mobile-central-ui,
@@ -789,7 +827,12 @@
 .rmp-force-no-show {
   display: none !important;
 }
-/* poster */
+/* force hidding of central play button on iOS */
+video.rmp-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+/* poster container */
 .rmp-poster {
   width: 100%;
   height: 100%;
@@ -799,6 +842,7 @@
   background-color: #000000;
   display: block;
 }
+/* poster image */
 .rmp-poster-img {
   position: absolute;
   left: 0;
@@ -816,6 +860,7 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+/* posterScaleMode setting */
 .rmp-object-fit-contain {
   object-fit: contain;
 }
@@ -828,7 +873,8 @@
 .rmp-object-fit-none {
   object-fit: none;
 }
-/* rmp-chrome is added while the player is active (user is interacting w/ the player) */
+/* rmp-chrome is added to player container while it is active (user is interacting w/ the player)
+ * hence player UI is visible */
 .rmp-chrome .rmp-control-bar,
 .rmp-chrome .rmp-title,
 .rmp-chrome .rmp-description,
@@ -841,7 +887,8 @@
   opacity: 1;
   visibility: visible;
 }
-/* rmp-no-chrome is added (and rmp-chrome removed) while the player is idle */
+/* rmp-no-chrome is added to player container (and rmp-chrome removed) while the player is idle
+ * hence player UI is not visible */
 .rmp-no-chrome .rmp-control-bar,
 .rmp-no-chrome .rmp-title,
 .rmp-no-chrome .rmp-description,
@@ -854,36 +901,13 @@
   opacity: 0;
   visibility: hidden;
 }
-/* hiding mouse cursor when no player chrome */
+/* when player is hidle then we auto-hide the mouse cursor if it is on player */
 .rmp-no-chrome.rmp-container,
 .rmp-no-chrome .rmp-content,
 .rmp-no-chrome .rmp-video,
 .rmp-no-chrome .rmp-poster,
 .rmp-no-chrome .rmp-poster-img {
   cursor: none;
-}
-/* force hidding of central play button on iOS */
-video.rmp-video::-webkit-media-controls-start-playback-button {
-  display: none !important;
-  -webkit-appearance: none;
-}
-/* debug overlay */
-.rmp-debug-overlay {
-  background: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  font-size: 12px;
-  overflow: auto;
-  z-index: 1001;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  text-align: left;
-}
-.rmp-debug-overlay-text {
-  margin-bottom: 5px;
 }
 /* logo layout */
 .rmp-logo {
@@ -2368,7 +2392,7 @@ google-cast-launcher {
   top: 50%;
   max-height: 100%;
   overflow: hidden;
-  padding: 2px 0;
+  padding: 2px 2px 2px 0;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -3360,18 +3384,6 @@ google-cast-launcher {
   text-decoration: none;
 }
 /* icons */
-/* player icons file
-  woff2 - Super Modern Browsers
-  woff - Modern Browsers
-  truetype - Safari, Android, iOS
-  svg - Legacy iOS
-  */
-@font-face {
-  font-family: 'rmp-font';
-  src: url('fonts/rmp-font.woff2?s73jsd') format('woff2'), url('fonts/rmp-font.woff?s73jsd') format('woff'), url('fonts/rmp-font.ttf?s73jsd') format('truetype'), url('fonts/rmp-font.svg?s73jsd#rmp-font') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 .rmp-i {
   font-family: 'rmp-font' !important;
   speak: none;
