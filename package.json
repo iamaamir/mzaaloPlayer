@@ -12,7 +12,9 @@
     "compile:debug": "lessc mzaaloPlayer/css/rmp-s1.less mzaaloPlayer/css/rmp-s1.css",
     "watch" : "less-watch-compiler --config less-watch-compiler.config.json",
     "push" : "scp -r mzaaloPlayer Xfinite@104.211.223.183:/var/www/html/build",
-    "deploy" : "yarn compile:debug && yarn compile && yarn push"
+    "push:prod" : "scp -r mzaaloPlayer xfinite@52.172.0.243:/var/www/html/build",
+    "deploy" : "yarn compile:debug && yarn compile && yarn push",
+    "deploy:prod" : "yarn compile && yarn push:prod"
   },
   "dependencies": {
     "less": "^3.11.1",
