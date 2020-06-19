@@ -24,7 +24,7 @@
 /* player icons file */
 @font-face {
   font-family: 'rmp-font';
-  src: url('fonts/rmp-font.woff2?s73jaf') format('woff2'), url('fonts/rmp-font.woff?s73jaf') format('woff'), url('fonts/rmp-font.ttf?s73jaf') format('truetype'), url('fonts/rmp-font.svg?s73jaf#rmp-font') format('svg');
+  src: url('fonts/rmp-font.woff2?s73zak') format('woff2'), url('fonts/rmp-font.woff?s73zak') format('woff'), url('fonts/rmp-font.ttf?s73zak') format('truetype'), url('fonts/rmp-font.svg?s73zak#rmp-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3457,7 +3457,7 @@ google-cast-launcher {
   font-size: 20px;
 }
 .rmp-i-live::before {
-  content: "\f192";
+  content: "\e924";
   font-size: 14px;
 }
 .rmp-i-quick-rewind-5::before {
