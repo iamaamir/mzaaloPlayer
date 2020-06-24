@@ -1,8 +1,8 @@
 {
   "metadata": {
     "name": "mzaplyr",
-    "lastOpened": 1418773394855,
-    "created": 1589055527101
+    "lastOpened": 0,
+    "created": 1592556162957
   },
   "iconSets": [
     {
@@ -3387,9 +3387,13 @@
           "id": 650
         },
         {
-          "order": 0,
+          "order": 47,
           "ligatures": "live_tv",
-          "id": 651
+          "id": 651,
+          "prevSize": 24,
+          "code": 59684,
+          "name": "live_tv",
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -3593,7 +3597,7 @@
           "prevSize": 24,
           "name": "share",
           "code": 59678,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -3772,7 +3776,7 @@
           "prevSize": 24,
           "name": "bookmark",
           "code": 59679,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 18,
@@ -3781,7 +3785,7 @@
           "prevSize": 24,
           "name": "bookmark_outline",
           "code": 59680,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -3820,7 +3824,7 @@
           "prevSize": 24,
           "name": "code",
           "code": 59681,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -3959,7 +3963,7 @@
           "prevSize": 24,
           "code": 59648,
           "name": "info_outline",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -4108,7 +4112,7 @@
           "prevSize": 24,
           "name": "settings",
           "code": 59682,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -5287,7 +5291,7 @@
           "prevSize": 24,
           "code": 59649,
           "name": "speed",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -21446,7 +21450,10 @@
           "ligatures": "feed, wave",
           "name": "feed",
           "order": 0,
-          "id": 30
+          "id": 30,
+          "prevSize": 32,
+          "code": 59685,
+          "tempChar": ""
         },
         {
           "ligatures": "mic, microphone",
@@ -23683,7 +23690,7 @@
           "id": 402,
           "prevSize": 32,
           "code": 60049,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "instagram, brand12",
@@ -23716,7 +23723,7 @@
           "id": 407,
           "prevSize": 32,
           "code": 60054,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "vine",
@@ -24007,7 +24014,7 @@
           "id": 455,
           "prevSize": 32,
           "code": 60102,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "hackernews",
@@ -24028,7 +24035,7 @@
           "id": 458,
           "prevSize": 32,
           "code": 60105,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "linkedin2, brand65",
